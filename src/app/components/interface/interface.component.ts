@@ -6,11 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './interface.component.scss'
 })
 export class InterfaceComponent {
-  ngOnInit(){
-    fetch('../../../assets/allegato/db.json')
-    .then(response=> response.json())
-    .then(data=> console.log(data))
-  }
+
 
 }
 export interface ipost{
