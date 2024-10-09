@@ -25,8 +25,17 @@ export class HomeComponent {
             this.featuredPost = post;
             // console.log(this.featuredPost); prende l'ultimo
           } else {
+            const shuffle = (array: iPosts[]) => {
+              for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+              }
+              return array;
+            };
             this.postsArr.push(post);
+            this.postsArr = shuffle(this.postsArr);
             this.postsArr = this.postsArr.slice(0, 4);
+
             // console.log(this.postArr);
           }
         });
