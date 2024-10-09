@@ -1,0 +1,28 @@
+<div class="card px-3 mt-3" *ngIf="featuredPost">
+  <div class="card px-3">
+    <h2 class="card-body">{{ featuredPost.title }}</h2>
+    <p class="card-body">{{ featuredPost.body }}</p>
+    <ul>
+      <li class="list-group-item" *ngFor="let tag of featuredPost.tags">
+        {{ tag }}
+      </li>
+    </ul>
+    <a href="#" class="btn btn-primary my-3">leggi</a>
+  </div>
+</div>
+
+<div class=".container mt-3">
+  <div class="row">
+    <div class="col" *ngFor="let post of postsArr">
+      <div class="card">
+        <h2 class="card-body">{{ post.title }}</h2>
+        <p class="card-body">{{ post.body }}</p>
+        <ul>
+          <li class="list-group-item" *ngFor="let tag of post.tags">
+            {{ tag }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
